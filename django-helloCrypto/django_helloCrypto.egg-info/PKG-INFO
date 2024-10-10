@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: django-helloCrypto
+Version: 0.1
+Summary: A Django app to display csv information
+Home-page: https://www.example.com/
+Author: Rohini Rakhit
+Author-email: rohini.rakhit@gmail.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django 4.0
+Classifier: Framework :: Django :: 4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Requires-Python: >=3.8
+
+========================
+HelloCrypto Application
+========================
+
+HelloCrypto is an application that will take your csv input and output a line chart displaying your data.
+
+To run the application:
+1. create a posgres database called 'helloCrypto'
+2. add "helloCryptoApp" to your INSTALLED_APPS setting like this::
+
+    INSTALLED_APPS = [
+        ...
+        'helloCryptoApp',
+    ]
+3. Include the polls URLconf in your project urls.py like this::
+
+    path('polls/', include('polls.urls')),
+4. Run ``python3 manage.py migrate`` to create the models for helloCryptoApp
+5. Run ``python3 manage.py runserver`` to run the development server and navigate to http://localhost:8000/helloCryptoApp/index to upload your csv.
+
+

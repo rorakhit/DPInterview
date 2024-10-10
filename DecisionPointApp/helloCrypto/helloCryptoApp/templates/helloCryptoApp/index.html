@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Upload page</title>
+  </head>
+  <body>
+    <p>This is the page where you will go to the upload page.</p>
+    <form action="upload_csv/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="input-file"> Upload a CSV</label>
+        <input type="file" id="input-file" name="input-file">
+        <button type="submit">Upload File</button>
+    </form>
+  </body>
+</html>

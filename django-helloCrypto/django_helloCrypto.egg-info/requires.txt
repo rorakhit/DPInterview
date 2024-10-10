@@ -1,0 +1,4 @@
+Django>=4.0
+django-chartjs>=2.3
+pandas>=1.4
+psycopg2-binary>=2.9

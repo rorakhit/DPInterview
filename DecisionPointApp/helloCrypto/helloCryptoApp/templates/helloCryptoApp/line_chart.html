@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cryptocurrency Value Line Chart</title>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+        <canvas id="currChart" width="600" height="400"></canvas>
+        <script type="text/javascript">
+            var currCanvas = $("#currChart");
+            var currCanvas = document.getElementById("currChart");
+            var currCanvas = document.getElementById("currChart").getContext("2d");
+
+            var lineChart = new Chart(currCanvas, {
+                type: 'line',
+                data: {
+                    labels: context.dates,
+                    datasets: [{
+                        label: context.label[0],
+                        data: context.data[0]
+                    },
+                    {
+                        label: context.label[1],
+                        data: context.data[1]
+                    },
+                    {
+                        label: context.label[2],
+                        data: context.data[2]
+                    },
+                    {
+                        label: context.label[3],
+                        data: context.data[3]
+                    }]
+                }
+            });
+        </script>
+    </body>
+</html>
